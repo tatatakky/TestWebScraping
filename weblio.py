@@ -3,7 +3,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "http://ejje.weblio.jp/content/suck"
+url = "http://ejje.weblio.jp/content/"
 
 weblio_data = requests.get(url)
 
