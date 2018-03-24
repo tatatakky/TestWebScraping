@@ -1,23 +1,11 @@
 # -*- coding: utf-8 -*-
-
 import requests
 from bs4 import BeautifulSoup
-import urllib
 
-print('input word')
-
-input_word = input()
-
-url = "http://ejje.weblio.jp/content/"+input_word
-
-weblio_data = requests.get(url)
-
+input_word = input("input word: ")
+weblio_data = requests.get("http://ejje.weblio.jp/content/"+input_word)
 soup = BeautifulSoup(weblio_data.text,'html.parser')
-
-word_meaning = soup.findAll("td",class_ = 'content-explanation')
-
-len2 = len(word_meaning)
-
+word_meanings = soup.findAll("td",class_ = 'content-explanation')
+len2 = len(word_meanings)
 for i in range(len2):
-
-    print(word_meaning[i].text)
+    print(word_meanings[i].text)
