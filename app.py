@@ -13,8 +13,8 @@ from weblio import *
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('OCns1AwjeI3wfAyD/+KKlQr1bXaBBPT44nuERvxLE+/MZKkUI6/eMnTc9PKaJn/LXEcMXnzMcuhc2Km5GZePWGViDbdSwAUCiinAYTDIFtqv5lvlPN8UTv0a6U4wWBWqirBobPiWaWtizW+Vw4sKxwdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('426b62b84070433c13e91a1b77df5d9b')
+line_bot_api = LineBotApi('**********')
+handler = WebhookHandler('**********')
 
 @app.route("/callback", methods=['POST'])
 def callback():
