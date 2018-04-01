@@ -7,6 +7,9 @@ def Research(input_word):
     soup = BeautifulSoup(weblio_data.text,'html.parser')
     word_meanings = soup.findAll("td",class_ = 'content-explanation')
     len2 = len(word_meanings)
-    for i in range(len2):
-        meaning+=word_meanings[i].text
-    return meaning
+    if len2 > 0:
+        for i in range(len2):
+            meaning+=word_meanings[i].text
+            return meaning
+    else:
+        return "sorry... Not Found"
